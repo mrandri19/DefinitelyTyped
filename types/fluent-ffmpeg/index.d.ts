@@ -291,6 +291,7 @@ declare namespace Ffmpeg {
         save(output: string): FfmpegCommand;
         writeToStream(stream: stream.Writable, options?: { end?: boolean }): stream.Writable;
         pipe(stream: stream.Writable, options?: { end?: boolean }): stream.Writable;
+        pipe(options?: { end?: boolean }): stream.PassThrough;
         stream(stream: stream.Writable, options?: { end?: boolean }): stream.Writable;
         takeScreenshots(config: number | ScreenshotsConfig, folder?: string): FfmpegCommand;
         thumbnail(config: number | ScreenshotsConfig, folder?: string): FfmpegCommand;
